@@ -8,5 +8,5 @@ RUN mvn clean install
 FROM openjdk:17-jdk-slim
 EXPOSE 8080
 COPY --from=build /target/test-1.0.0.jar app.jar
-ENTRYPOINT[ "java", "-jar", "app.jar" ]
+ENTRYPOINT  [ "java", "-jar", "app.jar" ]
 
